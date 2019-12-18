@@ -15,6 +15,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is SecondViewController {
+            let vc = segue.destination as SecondViewController
+            
+        }
+    }
+    
+    @IBAction func nextBbtnTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "showInputMemo", sender: self)
+    }
+    
 }
 
